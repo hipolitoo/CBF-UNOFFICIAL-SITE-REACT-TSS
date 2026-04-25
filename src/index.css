@@ -1,0 +1,93 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Syncopate', -apple-system, BlinkMacSystemFont, 'Rajdhani', 'Exo 2', 'Orbitron',
+    'Chakra Petch', 'Space Mono', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: linear-gradient(135deg, #fbff00 0%, #00ff33 50%, #09ff00 100%);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgb(229, 255, 0);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, #FCD34D, #FBBF24);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(to bottom, #FBBF24, #F59E0B);
+}
+
+.gradient-text {
+  @apply bg-gradient-to-r from-cbf-yellow via-cbf-yellow_bright to-cbf-yellow_dark bg-clip-text text-transparent font-extrabold;
+}
+
+.gradient-text-blue {
+  @apply bg-gradient-to-r from-cbf-blue_light to-cbf-blue bg-clip-text text-transparent;
+}
+
+.glass-effect {
+  @apply backdrop-blur-xl bg-white/5 border border-white/10 shadow-lg;
+}
+
+.glass-effect-yellow {
+  @apply backdrop-blur-xl bg-cbf-yellow/5 border border-cbf-yellow/20;
+}
+
+.button-glow {
+  @apply transition-all duration-300 hover:shadow-lg hover:shadow-cbf-yellow/60 active:scale-95;
+}
+
+.button-glow-blue {
+  @apply transition-all duration-300 hover:shadow-lg hover:shadow-cbf-blue_light/60 active:scale-95;
+}
+
+.card-hover {
+  @apply transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cbf-yellow/20;
+}
+
+.card-hover-subtle {
+  @apply transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-cbf-yellow/10;
+}
+
+.neon-border {
+  @apply border-2 border-transparent bg-clip-border bg-gradient-to-r from-cbf-yellow to-cbf-yellow_bright;
+}
+
+.neon-text {
+  @apply text-yellow-400 drop-shadow-lg;
+}
+
+.futuristic-gradient {
+  @apply bg-gradient-to-br from-cbf-dark via-cbf-dark_lighter to-cbf-dark;
+}
+
+.shimmer-effect {
+  background-image: linear-gradient(90deg, transparent, rgb(255, 255, 0), transparent);
+  background-size: 200% 100%;
+  animation: shimmer 3s infinite;
+}
+
+.pulse-yellow {
+  animation: glow 2s ease-in-out infinite;
+}
